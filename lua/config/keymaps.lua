@@ -57,3 +57,11 @@ map("n", "<leader>bo", "<cmd>BufferLineCloseOthers<CR>", { desc = "Close other t
 
 -- Toggle file explorer with VSCode style <C-b>
 map("n", "<C-b>", "<cmd>Neotree toggle<CR>", { desc = "Toggle File Explorer" })
+
+-- Goto Definition (Smart LSP + Verilog/SystemVerilog + Hidden Folders)
+map("n", "gd", function()
+  require("util.def").goto_definition()
+end, { desc = "Goto Definition (Smart LSP + Verilog/Hidden)" })
+map("n", "<C-]>", function()
+  require("util.def").goto_definition()
+end, { desc = "Goto Definition (Smart LSP + Verilog/Hidden)" })
